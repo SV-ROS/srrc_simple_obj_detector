@@ -4,8 +4,9 @@ simplest object detector.
 
 ## Examples of results:
 every blob that's not exactly black is an object candidate. no farther filtering used.
-!(frame0077.jpg "precache partially in shadow")
-!(frame0155.jpg "pink rock partially in shadow")
+
+![](frame0077.jpg "precache partially in shadow")
+![](frame0155.jpg "pink rock partially in shadow")
 
 brief usage for processing jpg files:
 
