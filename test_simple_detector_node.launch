@@ -1,0 +1,21 @@
+<launch>
+    <node pkg="srrc_simple_obj_detector" type="test_simple_detector_node" name="test_simple_detector_node" output="screen">
+        <!-- -->
+	  <param name="src_image_src_folder" value="/home/dd/img2dir_sources/20160417_sunspots-right" />
+	  <param name="src_image_file" value="" />
+	<!-- -->
+	
+        <!-- - ->
+	  <param name="src_image_file" value="/home/dd/img2dir_sources/frame0066.jpg" />
+	<!- - -->
+        <!-- - ->
+	  <param name="src_image_file" value="/home/dd/img2dir_sources/frame0077.jpg" />
+	<!- - -->
+        <param name="output_folder" value="/home/dd/img2dir_results/" />
+
+	<param name="show_images" value="false" />
+	<param name="saturation_threshold" value="168" />
+	<param name="brightness_threshold" value="20" />
+    </node>
+</launch>
+
