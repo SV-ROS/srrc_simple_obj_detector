@@ -1,6 +1,22 @@
 # srrc_simple_obj_detector
 
-simplest object detector.
+Simplest object detector.
+It turns out that the following simple function is already a good detector for srrc samples we have:
+
+  ```C++
+  cv::Mat makeObjectMask( cv::Mat const& src_bgr_image
+                        , int saturation_threshold = 168
+                        , int brightness_threshold = 20)
+  {
+    cv::Mat hsv_image = src_bgr_image.clone();
+    cv::cvtColor(hsv_image, hsv_image, cv::COLOR_BGR2HSV);
+    std::vector<cv::Mat> hsv_channels;
+    cv::split(hsv_image, hsv_channels);
+    return (hsv_channels[1] < saturation_threshold) & (hsv_channels[2] >= brightness_threshold);
+  }
+  ```    
+
+
 
 ## Examples of results:
 every blob that's not exactly black is an object candidate. no farther filtering used.
