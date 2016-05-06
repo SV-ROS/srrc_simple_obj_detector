@@ -6,9 +6,9 @@ project(srrc_simple_obj_detector)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   cv_bridge
-#  image_geometry
-#  image_proc
-#  image_transport
+  image_geometry
+  image_proc
+  image_transport
 #  message_filters
   roscpp
 #  rospy

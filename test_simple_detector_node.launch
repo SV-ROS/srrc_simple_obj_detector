@@ -11,11 +11,18 @@
         <!-- - ->
 	  <param name="src_image_file" value="/home/dd/img2dir_sources/frame0077.jpg" />
 	<!- - -->
-        <param name="output_folder" value="/home/dd/img2dir_results/" />
 
-	<param name="show_images" value="false" />
+        <!-- -->
+	  <param name="output_folder" value="/home/dd/img2dir_results/" />
+        <!-- -->
+        <!-- - ->
+	  <param name="output_folder" value="" />
+	<!- - -->
+
 	<param name="saturation_threshold" value="168" />
 	<param name="brightness_threshold" value="20" />
+	<param name="use_bw_result" value="false" />
+	<param name="show_images" value="false" />
     </node>
 </launch>
 
