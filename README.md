@@ -1,6 +1,7 @@
-# srrc_simple_obj_detector
+# srrc_simple_obj_detector. Simplest object detector.
 
-Simplest object detector.
+The goal was to find a way to discover partially shadowed objects and the precache together with hook as single blobs to make object size estimation more precise and to determine hook orientation for precache. It appeared this simple filter does this trick good enough compared to other solutions I saw.
+
 It turns out that the following simple function is already a good detector for srrc samples we have:
 
   ```C++
@@ -15,7 +16,7 @@ It turns out that the following simple function is already a good detector for s
     return (hsv_channels[1] < saturation_threshold) & (hsv_channels[2] >= brightness_threshold);
   }
   ```    
-
+Of course this simple rule will not work on sand or asphalt surface or with objects colored by other paints or with different camera settings or lightning conditions.
 
 
 ## Examples of results:
