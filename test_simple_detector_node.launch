@@ -1,26 +1,34 @@
 <launch>
     <node pkg="srrc_simple_obj_detector" type="test_simple_detector_node" name="test_simple_detector_node" output="screen">
         <!-- -->
-	  <param name="src_image_src_folder" value="/home/dd/img2dir_sources/20160417_sunspots-right" />
+	  <param name="src_image_src_folder" value="/home/dd/img2dir_sources/footbol_field/right/" />
 	  <param name="src_image_file" value="" />
 	<!-- -->
 	
         <!-- - ->
-	  <param name="src_image_file" value="/home/dd/img2dir_sources/frame0066.jpg" />
+	  <param name="src_image_file" value="/home/dd/img2dir_sources/footbol_field/frame0171.jpg" />
+	  <param name="src_image_src_folder" value="" />
 	<!- - -->
         <!-- - ->
 	  <param name="src_image_file" value="/home/dd/img2dir_sources/frame0077.jpg" />
 	<!- - -->
 
         <!-- -->
-	  <param name="output_folder" value="/home/dd/img2dir_results/" />
+	  <param name="output_folder" value="/home/dd/img2dir_results/footbol_field/right/" />
         <!-- -->
         <!-- - ->
 	  <param name="output_folder" value="" />
 	<!- - -->
 
-	<param name="saturation_threshold" value="168" />
-	<param name="brightness_threshold" value="20" />
+	<param name="saturation_threshold" value="60" />
+	<param name="brightness_threshold" value="10" />
+	
+	<param name="blob_filter_min_blob_size" value="30" />
+	<param name="blob_filter_max_blob_size" value="200" />
+	<param name="blob_filter_min_blob_area" value="600" />
+	<param name="blob_filter_max_blob_area" value="40000" />
+	<param name="blob_filter_border_margin" value="3" />
+
 	<param name="use_bw_result" value="false" />
 	<param name="show_images" value="false" />
     </node>

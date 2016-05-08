@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   image_geometry
   image_proc
   image_transport
+  message_generation
 #  message_filters
   roscpp
 #  rospy
@@ -36,6 +37,12 @@ find_package(Boost REQUIRED COMPONENTS system thread)
 #  std_msgs
 #)
 
+## Generate messages in the 'msg' folder
+#add_message_files(
+#   FILES
+#   DetectorResult.msg
+#)
+
 ###################################
 ## catkin specific configuration ##
 ###################################
@@ -57,7 +64,7 @@ catkin_package(
 #    sensor_msgs
     #stereo_image_proc
 #    stereo_msgs
-#    std_msgs
+   std_msgs
   DEPENDS system_lib
 )
 

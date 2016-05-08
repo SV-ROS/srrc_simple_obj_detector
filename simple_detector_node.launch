@@ -3,9 +3,14 @@
 	<param name="input_image_topic" value="/turret_stereo/left/image" />
 	<param name="input_image_transfer_hint" value="compressed" />
 
-	<param name="saturation_threshold" value="168" />
-	<param name="brightness_threshold" value="20" />
-	<param name="use_bw_result" value="false" />
+	<param name="saturation_threshold" value="60" />
+	<param name="brightness_threshold" value="10" />
+	
+	<param name="blob_filter_min_blob_size" value="30" />
+	<param name="blob_filter_max_blob_size" value="200" />
+	<param name="blob_filter_min_blob_area" value="600" />
+	<param name="blob_filter_max_blob_area" value="40000" />
+	<param name="blob_filter_border_margin" value="3" />
 
         <!-- reset unused -->
 	<param name="output_folder" value="" />
